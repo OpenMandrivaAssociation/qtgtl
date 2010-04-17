@@ -1,12 +1,11 @@
 Summary: Qtbindings for OpenGTL and OpenShiva
 Name: qtgtl
-Version: 0.9.0
+Version: 0.9.1
 Release: %mkrel 1
 License: GPLv2
 Group: System/Libraries
 Source:	http://www.opengtl.org/download/libQtGTL-%{version}.tar.bz2
 Patch0: libQtGTL-0.9.0-linkage.patch
-Patch1: libQtGTL-0.9.0-soname.patch
 URL: http://opengtl.org/
 BuildRequires: qt4-devel
 BuildRequires: cmake
@@ -17,7 +16,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 Qtbindings for OpenGTL and OpenShiva.
 
 #------------------------------------------------------------------------------
-%define qtgtl_major 0
+%define qtgtl_major 0.1
 %define libqtgtl %mklibname QtGTL %qtgtl_major
 
 %package -n %libqtgtl
@@ -30,10 +29,10 @@ Qtbinding for OpenGTL.
 %files -n %libqtgtl
 %defattr(-,root,root)
 %{_libdir}/libQtGTL.so.%{qtgtl_major}
-%{_libdir}/libQtGTL.so.%{qtgtl_major}.*
+%{_libdir}/libQtGTL.so.%{version}
 
 #------------------------------------------------------------------------------
-%define qtshiva_major 0
+%define qtshiva_major 0.1
 %define libqtshiva %mklibname QtShiva %qtshiva_major
 
 %package -n %libqtshiva
@@ -46,7 +45,7 @@ Qtbinding for OpenShiva.
 %files -n %libqtshiva
 %defattr(-,root,root)
 %{_libdir}/libQtShiva.so.%{qtshiva_major}
-%{_libdir}/libQtShiva.so.%{qtshiva_major}.*
+%{_libdir}/libQtShiva.so.%{version}
 
 #------------------------------------------------------------------------------
 %package devel
@@ -73,7 +72,6 @@ Development files for Qtbindings for OpenGTL and OpenShiva.
 %prep
 %setup -q -n libQtGTL-%{version}
 %patch0 -p0
-%patch1 -p0
 
 %build
 %cmake_qt4
