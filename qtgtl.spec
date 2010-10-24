@@ -1,13 +1,11 @@
 Summary: Qtbindings for OpenGTL and OpenShiva
 Name: qtgtl
 Version: 0.9.1
-Release: %mkrel 2
+Release: %mkrel 3
 License: GPLv2
 Group: System/Libraries
 Source:	http://www.opengtl.org/download/libQtGTL-%{version}.tar.bz2
 Patch0: libQtGTL-0.9.0-linkage.patch
-Patch1: http://bitbucket.org/opengtl/libqtgtl/changeset/f7913d273bb4/raw/libqtgtl-f7913d273bb4.diff
-URL: http://opengtl.org/
 BuildRequires: qt4-devel
 BuildRequires: cmake
 BuildRequires: opengtl-devel
@@ -73,7 +71,6 @@ Development files for Qtbindings for OpenGTL and OpenShiva.
 %prep
 %setup -q -n libQtGTL-%{version}
 %patch0 -p0
-%patch1 -p1
 
 %build
 %cmake_qt4
