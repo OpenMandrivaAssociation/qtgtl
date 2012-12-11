@@ -79,3 +79,26 @@ rm -rf %buildroot
 
 %clean
 rm -rf %buildroot
+
+
+%changelog
+* Wed Apr 18 2012 Bernhard Rosenkraenzer <bero@bero.eu> 0.9.2-1
++ Revision: 791693
+- 0.9.2
+
+* Sun Oct 24 2010 Funda Wang <fwang@mandriva.org> 0.9.1-3mdv2011.0
++ Revision: 589151
+- we don't need this patch at the time
+
+* Sun Oct 24 2010 Funda Wang <fwang@mandriva.org> 0.9.1-2mdv2011.0
++ Revision: 588936
+- add upstream patch to build with latest opengtl
+
+* Sat Apr 17 2010 Funda Wang <fwang@mandriva.org> 0.9.1-1mdv2010.1
++ Revision: 535931
+- New version 0.9.1
+
+* Fri Oct 09 2009 Funda Wang <fwang@mandriva.org> 0.9.0-1mdv2010.0
++ Revision: 456411
+- import qtgtl
+
