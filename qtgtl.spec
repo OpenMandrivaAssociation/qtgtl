@@ -1,7 +1,7 @@
 Summary: Qtbindings for OpenGTL and OpenShiva
 Name: qtgtl
 Version: 0.9.2
-Release: 4
+Release: 5
 License: GPLv2
 Group: System/Libraries
 Source:	http://download.opengtl.org/libQtGTL-%{version}.tar.bz2
